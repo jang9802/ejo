@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.MainController">
+   <top>
+      <VBox prefHeight="48.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="TOP_RIGHT" prefHeight="54.0" prefWidth="700.0" spacing="10.0">
+               <padding>
+                  <Insets right="15.0" top="15.0" />
+               </padding>
+               <children>
+                  <Label fx:id="loginButton" onMouseClicked="#loginProc" prefHeight="15.0" prefWidth="59.0" text="로그인" />
+                  <Label fx:id="idpwButton" onMouseClicked="#idpwProc" text="ID/PW 찾기" />
+                  <Label fx:id="regButton" onMouseClicked="#regProc" prefHeight="19.0" prefWidth="76.0" text="회원가입" />
+                  <Label fx:id="mypageButton" onMouseClicked="#myPageProc" prefHeight="19.0" prefWidth="94.0" text="마이페이지" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <VBox prefHeight="59.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="35.0" prefWidth="700.0" spacing="15.0">
+               <children>
+                  <Label text="회사소개" />
+                  <Label text="인재채용" />
+                  <Label text="제휴제안" />
+                  <Label text="이용약관" />
+                  <Label text="개인정보처리방침" />
+               </children>
+               <padding>
+                  <Insets left="20.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="41.0" prefWidth="700.0" spacing="15.0">
+               <children>
+                  <Label text="EJO 주식회사 : 대표 장현기" />
+                  <Label text="사업자 등록번호 : 000-00-00000" />
+               </children>
+               <padding>
+                  <Insets left="20.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </bottom>
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="66.0" prefWidth="700.0">
+               <children>
+                  <HBox prefHeight="35.0" prefWidth="700.0">
+                     <children>
+                        <ImageView fx:id="logo" fitHeight="67.0" fitWidth="162.0" onMouseClicked="#mainProc" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resource/logo.png" />
+                           </image>
+                        </ImageView>
+                        <HBox alignment="CENTER" prefHeight="43.0" prefWidth="527.0" spacing="20.0">
+                           <padding>
+                              <Insets right="15.0" />
+                           </padding>
+                           <children>
+                              <VBox alignment="TOP_RIGHT" prefHeight="67.0" prefWidth="575.0">
+                                 <children>
+                                    <Label fx:id="noticeButton" alignment="CENTER_RIGHT" contentDisplay="RIGHT" onMouseClicked="#noticeProc" prefHeight="27.0" prefWidth="72.0" text="공지사항" />
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                                       <children>
+                                          <TextField fx:id="searchfield" prefHeight="29.0" prefWidth="365.0" />
+                                          <Button fx:id="searchButton" mnemonicParsing="false" onMouseClicked="#searchProc" text="찾기" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" prefHeight="46.0" prefWidth="700.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="239.0" prefWidth="700.0">
+                     <children>
+                        <ImageView fx:id="goodsImage" fitHeight="130.0" fitWidth="150.0" onMouseClicked="#goGoods" onMouseEntered="#onGoodsCursor" onMouseExited="#offGoodsCursor">
+                           <image>
+                              <Image url="@goodsImage.jpg" />
+                           </image>
+                           <HBox.margin>
+                              <Insets bottom="20.0" left="40.0" right="20.0" top="60.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <ImageView fx:id="eventImage" fitHeight="130.0" fitWidth="150.0" onMouseClicked="#goEvent" onMouseEntered="#onEventCursor" onMouseExited="#offEventCursor">
+                           <image>
+                              <Image url="@eventImage.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="80.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <ImageView fx:id="drawImage" fitHeight="130.0" fitWidth="150.0" onMouseClicked="#goDraw" onMouseEntered="#onDrawCursor" onMouseExited="#offDrawCursor">
+                           <image>
+                              <Image url="@drawImage.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets bottom="20.0" right="20.0" top="40.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
