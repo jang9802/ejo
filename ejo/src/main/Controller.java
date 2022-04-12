@@ -11,6 +11,7 @@ public class Controller {
 	private static Parent mainForm;
 	private static Parent nowForm;
 	private static Parent regForm;
+	private static Parent findPwForm;
 	private CommonService commonService;
 	private static String loginId;
 	
@@ -58,6 +59,12 @@ public class Controller {
 		commonService.windowClose(nowForm);
 		openService.openMainPage();
 	}
+
+	public void setFindPwForm(Parent findPwForm) {
+		this.findPwForm=findPwForm; 
+	}
+
+	
 	
 	
 	

@@ -40,12 +40,12 @@ public class LoginController extends PublicController implements Initializable{
 		loginService.login(id.getText(), pw.getText());
 	}
 
+	
 	public void findIdProc() {
-		
 	}
 	
 	public void findPwProc() {
-		
+		openService.openFindPwPage();
 	}
 	
 	

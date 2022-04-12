@@ -29,7 +29,6 @@ public class RegController extends PublicController implements Initializable{
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		// TODO Auto-generated method stub
 		queBox.getItems().addAll("첫사랑 이름은?","졸업한 초등학교는?","가장 친한 친구의 이름은?","나의 고향은?");
 		commonService = new CommonService();
 		controller = new Controller();

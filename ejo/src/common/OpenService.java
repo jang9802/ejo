@@ -32,7 +32,10 @@ public class OpenService {
 	public void openDrawPage() {
 		
 	}
-	
+
+	public void openFindPwPage() {
+		pageOpen("/login/findPw.fxml","findPw");
+	}
 	public void openMainPage() {
 		pageOpen("/main/main.fxml","main");
 	}
@@ -48,6 +51,7 @@ public class OpenService {
 			case "login" : controller.setLoginForm(form); break;
 			case "main" : controller.setMainForm(form); break;
 			case "register" : controller.setRegForm(form); break;
+			case "findPw" : controller.setFindPwForm(form);break;
 			default : return;
 			}
 			controller.setNowForm(form);
